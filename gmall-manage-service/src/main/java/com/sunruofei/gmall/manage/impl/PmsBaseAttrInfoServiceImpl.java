@@ -9,10 +9,11 @@ import com.sunruofei.gmall.bean.PmsBaseAttrValue;
 import com.sunruofei.gmall.manage.mapper.PmsBaseAttrInfoMapper;
 import com.sunruofei.gmall.manage.mapper.PmsBaseAttrValueMapper;
 import com.sunruofei.gmall.service.PmsBaseAttrInfoService;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.thymeleaf.util.StringUtils;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * <p>
@@ -94,5 +95,12 @@ public class PmsBaseAttrInfoServiceImpl extends ServiceImpl<PmsBaseAttrInfoMappe
 
 
         return "success";
+    }
+
+    @Override
+    public List<PmsBaseAttrInfo> getAttrValueListByValueId(Set<String> valueIdSet) {
+        String valueIdStr = StringUtils.join(valueIdSet, ",");//41,45,46
+        List<PmsBaseAttrInfo> pmsBaseAttrInfos = pmsBaseAttrInfoMapper.selectAttrValueListByValueId(valueIdStr);
+        return pmsBaseAttrInfos;
     }
 }

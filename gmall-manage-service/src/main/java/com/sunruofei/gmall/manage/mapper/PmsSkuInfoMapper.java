@@ -2,6 +2,9 @@ package com.sunruofei.gmall.manage.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.sunruofei.gmall.bean.PmsSkuInfo;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,5 @@ import com.sunruofei.gmall.bean.PmsSkuInfo;
  */
 public interface PmsSkuInfoMapper extends BaseMapper<PmsSkuInfo> {
 
+    List<PmsSkuInfo> selectSkuSaleAttrValueListBySpu(@Param("productId") String productId);
 }

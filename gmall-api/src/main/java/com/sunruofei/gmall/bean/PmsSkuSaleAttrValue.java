@@ -1,6 +1,7 @@
 package com.sunruofei.gmall.bean;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import com.baomidou.mybatisplus.annotation.TableId;
 
@@ -55,7 +56,6 @@ public class PmsSkuSaleAttrValue extends Model<PmsSkuSaleAttrValue> {
      * 销售属性值名称(冗余)
      */
     private String saleAttrValueName;
-
 
     @Override
     protected Serializable pkVal() {

@@ -1,6 +1,7 @@
 package com.sunruofei.gmall.bean;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import com.baomidou.mybatisplus.annotation.TableId;
 
@@ -45,6 +46,12 @@ public class PmsProductSaleAttrValue extends Model<PmsProductSaleAttrValue> {
      * 销售属性值名称
      */
     private String saleAttrValueName;
+
+    /**
+     * 是否是选中属性
+     */
+    @TableField(exist = false)
+    private String isChecked;
 
 
     @Override
