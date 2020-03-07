@@ -1,14 +1,15 @@
 package com.sunruofei.gmall.bean;
 
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.extension.activerecord.Model;
 import com.baomidou.mybatisplus.annotation.TableId;
-
-import java.io.Serializable;
-
+import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -37,12 +38,12 @@ public class OmsCartItem extends Model<OmsCartItem> {
     /**
      * 购买数量
      */
-    private String quantity;
+    private int quantity;
 
     /**
      * 添加到购物车的价格
      */
-    private String price;
+    private BigDecimal price;
 
     /**
      * 销售属性1
@@ -87,17 +88,17 @@ public class OmsCartItem extends Model<OmsCartItem> {
     /**
      * 创建时间
      */
-    private String createDate;
+    private Date createDate;
 
     /**
      * 修改时间
      */
-    private String modifyDate;
+    private Date modifyDate;
 
     /**
      * 是否删除
      */
-    private String deleteStatus;
+    private int deleteStatus;
 
     /**
      * 商品分类
@@ -107,6 +108,11 @@ public class OmsCartItem extends Model<OmsCartItem> {
     private String productBrand;
 
     private String productSn;
+
+    private BigDecimal totalPrice;
+
+    //商品选中状态
+    private String isChecked;
 
     /**
      * 商品销售属性:[{"key":"颜色","value":"颜色"},{"key":"容量","value":"4G"}]

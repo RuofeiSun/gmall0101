@@ -24,7 +24,7 @@ import java.util.Set;
  * @since 2020-01-07
  */
 @Service
-public class PmsBaseAttrInfoServiceImpl extends ServiceImpl<PmsBaseAttrInfoMapper, PmsBaseAttrInfo> implements PmsBaseAttrInfoService {
+public class PmsBaseAttrInfoServiceImpl extends ServiceImpl<PmsBaseAttrInfoMapper, PmsBaseAttrInfo> implements PmsBaseAttrInfoService{
 
     @Autowired
     PmsBaseAttrInfoMapper pmsBaseAttrInfoMapper;

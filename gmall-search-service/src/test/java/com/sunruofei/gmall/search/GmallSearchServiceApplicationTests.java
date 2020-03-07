@@ -33,8 +33,9 @@ class GmallSearchServiceApplicationTests {
 
     @Test
     void contextLoads() throws IOException {
-        get();
+        //get();
         //put();
+
 
     }
 

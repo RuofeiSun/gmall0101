@@ -2,6 +2,7 @@ package com.sunruofei.gmall.manage.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.sunruofei.gmall.bean.PmsBaseAttrInfo;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -15,5 +16,6 @@ import java.util.List;
  */
 public interface PmsBaseAttrInfoMapper extends BaseMapper<PmsBaseAttrInfo> {
 
-    List<PmsBaseAttrInfo> selectAttrValueListByValueId(String valueIdStr);
+    List<PmsBaseAttrInfo> selectAttrValueListByValueId(@Param("valueIdStr") String valueIdStr);
+
 }

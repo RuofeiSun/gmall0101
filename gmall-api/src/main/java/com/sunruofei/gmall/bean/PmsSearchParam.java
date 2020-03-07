@@ -12,6 +12,16 @@ public class PmsSearchParam extends Model<PmsSearchParam> {
 
     private List<PmsSkuAttrValue> skuAttrValueList;
 
+    public String[] getValueId() {
+        return valueId;
+    }
+
+    public void setValueId(String[] valueId) {
+        this.valueId = valueId;
+    }
+
+    public String[] valueId;
+
     public String getCatalog3Id() {
         return catalog3Id;
     }
@@ -31,6 +41,8 @@ public class PmsSearchParam extends Model<PmsSearchParam> {
     public List<PmsSkuAttrValue> getSkuAttrValueList() {
         return skuAttrValueList;
     }
+
+
 
     public void setSkuAttrValueList(List<PmsSkuAttrValue> skuAttrValueList) {
         this.skuAttrValueList = skuAttrValueList;

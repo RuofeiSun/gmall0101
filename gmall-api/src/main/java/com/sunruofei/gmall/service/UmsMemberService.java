@@ -1,7 +1,10 @@
 package com.sunruofei.gmall.service;
 
-import com.sunruofei.gmall.bean.UmsMember;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.sunruofei.gmall.bean.UmsMember;
+import com.sunruofei.gmall.bean.UmsMemberReceiveAddress;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,11 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface UmsMemberService extends IService<UmsMember> {
 
+    List<UmsMember> getAllUser();
+
+    List<UmsMemberReceiveAddress> getReceiveAddressByMemberId(String memberId);
+
+    UmsMember login(UmsMember umsMember);
+
+    void addUserToken(String token, String memberId);
 }
